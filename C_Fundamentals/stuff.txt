@@ -1,0 +1,42 @@
+Structure of a C program: 
+
+    directives 
+    
+    int main(void) 
+    { 
+        statements 
+    }
+    
+    
+What happens when  u execute cc pun.c 
+1.Preprocessing 
+2.Compiling
+3.Linking
+
+Preprocessing : Before Compiling , the program is edited by the preprocessor. 
+Directives gives the information needed by the preprocessor to edit the program. 
+Eg the directive  #include <stdio.h>  tells the preprocessor to include the header <stdio.h> in the program. 
+Every directive starts with #. 
+
+U cant to do %.2f in scanf. 
+But u can do %2f in scanf , using this u will accept only  first 2 characters in the input irrespsective of what user enters.
+
+
+float c = 3f ;  is invalid ,  c expects one of these notations for floating numbers: a decimal point (32.0f) or scientific notation (3.2e1f)
+
+identifier rules: 
+Only contains a-z , A-Z , 0-9 or _ .
+Cannot start with digits
+
+Token: smallest meaningful unit in a program.
+6 basic types: 
+1.Keywords
+2.Identifiers
+3.Constants [ integer constants , float constants , string literals ]
+4.Operators
+5.Punctuators / Seperators
+
+Compilers replace comments with a single space ' ' .
+
+Horner's rule: Technique to evaluate polynomials so that less multiplications are performed.
+x^3+x^2+x+1 --> ((x+1)x+1)x+1 
