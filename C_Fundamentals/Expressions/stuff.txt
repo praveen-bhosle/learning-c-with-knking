@@ -1,0 +1,21 @@
+Precendence and associativity 
+The operators have a precendence order 
++ -  unary 
+* /  binary 
++ -  binary 
+
+i + j * k -> i + ( j * k ) 
+-i * -j -> (-i) * (-j) 
++i + j / k -> (+i) + (j/k) 
+
+For operators on same level ,  like * / we will use associativity rules.
+
+An  operator is said to be left associative if it groups from left to right. 
+Eg : * , / 
+     + , - [ binary] 
+i * j / k  is equal to ( i * j ) / k 
+
+If an operator is right associative it groups from right to left. 
+Eg> + , - [ unary ] 
+
+- - i  -> - (- i)  
