@@ -9,19 +9,25 @@ int main(void) {
     // if u try to modify the string literal u will get error .
     // *p = 'a' ;  // error 
 
-    // u must always pass a string literal to printf. 
+    // u must always pass a char pointer or a string literal. to printf. 
     // passing a char is wrong. 
     // 'a' is diff from "a" , 
     // 'a' is char. 
-    printf("a""\n") ; // printf expects a pointer as its first argument. 
-    // "a" is pointer to the location containing 'a' in memory , 'a' is followed by '\0' in next memory location. 
- 
+  
+
     // passing pointers  to printf. 
-    printf(p ) ;  // Abd  
+    printf( p ) ;  // Abd  
     printf("\n") ; 
     printf(p+1) ;   // bd 
     printf("\n") ; 
     // printf will print until it reachers \0.
+ 
+     
+    // lets dissect contents of the string literal.
+    for( char* x  = p ; x < p+5 ;  x++) { 
+        printf("%d " , *x ) ; 
+    }  
+    // 65 , 98 , 100 , 0 . as u can see the fourth char was /0 it was added by C after the end of abd. 
 
 
     char* r = "abcd\n\0eejdd" ; 
@@ -35,8 +41,8 @@ int main(void) {
     
   
     char* name1 = "praveen" ; 
-    // *name1 = 'P' ;  // This does not 
-    printf("%p"  , name1 ) ;  
+    // *name1 = 'P' ;  //  doesnt work.
+    printf("%p %s\n"  , name1  , name1 )  ;  
 
     char name2[] = "praveen" ; 
     *name2 = 'P' ;  // This works 
@@ -86,5 +92,15 @@ int main(void) {
    // gets(str2) ; 
     scanf("%1s" ,str2) ;  // scans only first 1 non space chars.
     puts(str2) ; 
+
+
+
+
+    // Directly passing string literal is different. 
+    // here the string  literal passed wont end with \0 unless added by urself. 
+    printf("a""\n") ; // printf expects a char pointer as its first argument. 
+    // "a" is pointer to the location containing 'a' in memory , 'a' is followed by '\0' in next memory location. 
+    printf("abc\0""def") ;  
+    printf("\n") ; 
 
 }

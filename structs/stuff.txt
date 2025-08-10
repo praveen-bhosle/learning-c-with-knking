@@ -1,0 +1,3 @@
+If u are using %p , make sure u are passing a pointer.
+The name of struct is not a pointer. 
+Whereas the name of an array is pointer to the first element of the array. 
