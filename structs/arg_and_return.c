@@ -34,6 +34,7 @@ int main() {
 
     print(p1) ;  
 
+    print( (Point) {  23  ,44  }  ) ; 
     
 }
 

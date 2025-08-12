@@ -49,4 +49,14 @@ int main() {
     printf("After copy %s\n" , c.a) ;
     // lvalue members can be assigned directly using = , changed using ++ , -- .etc.     
    
+
+    // using compound literals to initialise structs  
+
+    Employee d ; 
+    d = (Employee)  { .number = 12  , .age = 44  , .name =" prabeen "  } ; 
+  
+   
+    struct employee e = (struct employee) {  44,"prabeen" ,18  } ; 
+     
+    printf("%s %d\n " , e.name , e.age)  ; 
 }
