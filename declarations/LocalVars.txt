@@ -1,0 +1,9 @@
+Local Variable: 
+Declared inside a function . 
+by default local vars have auto storage duration and are block scoped.
+
+addding static keyword before local vars: [static local var] 
+the storage duration will change  to static from auto.
+it will still be block scoped. 
+
+parameters -> auto[storage_duration] and block[scope]

@@ -1,0 +1,14 @@
+To share a function we have define the function in one file and files that want this function will just declare it.
+
+It is similiar for variables , we will use extern keyword. 
+The main file in which the variable will be have declaration + definition. 
+In the files where we will access this variable we will just use the declaration with the extern keyword. 
+
+When declarations of the same variable appear in different files, the compiler can’t check that the declarations match the variable’s definition. 
+For example, one file may contain the definition
+int i;
+while another file contains the declaration
+extern long i;
+An error of this kind can cause the program to behave unpredictably.
+
+So we put the declarations of shared variables in the header files.

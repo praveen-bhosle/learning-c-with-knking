@@ -1,0 +1,3 @@
+External variables / global vars : 
+Vars that are declared outside the body of a function. 
+by default static[storage_duration] and scope[file]  

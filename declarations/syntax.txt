@@ -1,0 +1,36 @@
+Syntax for declarations: 
+
+declaration-specifiers declarators ;
+
+declaration specifiers : 
+properties of the variables declared. 
+
+Categories of declaration specifiers 
+
+1.Storage Classes: 
+  auto,static,extern,register 
+  A declaration can have max 1 storage class.
+  If present it should come first. 
+2.Type Qualifiers: 
+  const,volatile,restrict 
+  A declaration can have max : no limit.
+3.Type Specifiers: 
+  void,int,long,float,double,char,signed,unsigned
+  order does not matter.
+  type names creating using typedef also come in this category. 
+  type specifiers also include specifications of structures, unions, and enumerations
+  for eg. struct point { int x, y; }, struct { int x, y; }, or struct point
+4.function specifier : 
+  used only in function declarations. 
+  only one member : inline 
+
+Order: 
+1 always first if present , order of 2 3 4 does not matter.
+
+declarators: 
+names of the variable and might give some additional properties too. 
+identifiers -> name of vars 
+identifiers followed by [] for arrays. 
+identifiers preceded by * for pointers.
+identifiers followed by () for function names. 
+

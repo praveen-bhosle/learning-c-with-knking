@@ -1,0 +1,10 @@
+scenario:
+main.c includes file1.h and file2.h 
+both file1.h and file2.h include file3.h 
+So when main.c will be complied file3.h will be compiled twice.
+This will lead to issues if file3.h contains type definitions.
+
+This can be avoided using #ifndef-#endif pair.
+
+The first time u include the file the content inside ifndef-endif will be included 
+but for second time the content inside ifndef-endif will be skipped.

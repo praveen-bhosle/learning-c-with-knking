@@ -1,0 +1,8 @@
+#error directives are often put in header files to check for conditions under
+which the header file shouldn’t be included. For example, suppose that a header
+file uses a feature that didn’t exist prior to the original C89 standard. To prevent the
+header file from being used with older, nonstandard compilers, it could contain an
+#ifndef directive that tests for the existence of the __STDC__ macro:
+#ifndef __STDC__
+#error This header requires a Standard C compiler
+#endif

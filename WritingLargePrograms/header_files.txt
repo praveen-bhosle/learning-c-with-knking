@@ -1,0 +1,34 @@
+#include directive 
+When we add a header file using #inculde then the contents of that header file are made available in the source file too.  
+
+#include <file_name> 
+This is used to get the standard header files. 
+the name of header file is searched in  directory in which system header files reside. 
+/usr/include for UNIX systems.
+U can user <> for custom header files but then  the header files should be present in the dir containing system header files. 
+
+#include "file_name" 
+To get user defined header files.
+The name of header file is searched in the current directory and also search the directory where the system files reside. 
+The dir to search  for header files can be altered , command line arg -Ipath can be used too. 
+in the file_name ,  u can also specify the file path , like "../dir_name/..etc." 
+
+There is third way too. 
+look at this example 
+
+#if defined(IA32)
+  #define CPU_FILE "ia32.h"
+#elif defined(IA64)
+  #define CPU_FILE "ia64.h" 
+#elif defined(AMD64)
+  #define CPU_FILE "amd64.h" 
+#endif 
+
+#include CPU_FILE
+
+When calling a function from another source file , it is necessary to make sure that the function already has the prototype of the function that we are calling. 
+This prevents the compiler from assuming the return  types and types of arguments which may lead to issues.
+
+We can put the functions that will be shared in a header file. 
+
+Its also common to include macros and typdefs in header files. 

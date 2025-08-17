@@ -1,0 +1,12 @@
+declaring a var : declaring a varible's name and its type. 
+defining a var : setting aside space for i.
+
+int i ; 
+it will decale a variable i with type int and as well define it by setting aside space for it. 
+
+we can use the keyword extern to just declare the variable and not defining it. 
+Adding extern does not sets aside space for the variable.
+
+int  a[] ; does not work , because here the compiler does not know how much space to set aside for a.
+extern  int a[] ; works fine because we are not assigning any space to a we have just declared it. 
+extern tells compiler that 'a' is defined somewhere else so no need to allocate any memory for it.

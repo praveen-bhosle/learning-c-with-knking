@@ -1,0 +1,48 @@
+Storage Duration: 
+From : the memory was allocated for the member.
+To   : the memory deallocated / freed. 
+if a variable has 
+automatic storage duration: 
+    memory allocated when the surrounding block executed. 
+    memory deallocated when the surrounding block terminates.
+static storage duration: 
+    stays at same storage location as long as the program is running. 
+
+Scope: 
+The portion of program text in which var can be referenced. 
+block scope: {}  
+file scope : from its point of declaration to the end of file.
+
+Linkage: 
+Extent to which a var  can be shared by different parts of program. 
+External linkage : all files
+internal linkage : restricted to single file but may be shared by functions in that file. 
+
+All default values : 
+                     storage_duration  scope   linkage 
+inside a block    :  automatic         block   no 
+outside any block :  static            file    external 
+
+auto storage class : 
+can be declared only in block. 
+has same effect as a variable with default specs in a block.
+thats why never used explicitly.
+
+static storage class : 
+can be used anywhere in the file. 
+if used outside a block : 
+  linkage -> internal  , rest same as defualt. 
+  this will hide that var to other files. 
+  This is called information hiding.
+if used in a block: 
+  storage_duration -> static , rest same as defualt. 
+
+static var inside a block remains at the same storage location throughout program execution. 
+
+static var in a block is initialised only once , before the program executes. 
+auto var initialised every time it comes into existence. 
+Each time a function is called recursively it gets new set of auto vars. 
+If it has a static variable , that var is shared by all the calls of the fn.
+Function returning a pointer to an auto var doesnt work , same think for static var works.
+
+Extern Storage Class 

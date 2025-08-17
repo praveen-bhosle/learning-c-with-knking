@@ -26,6 +26,10 @@ void y ( int* const p) {
 int main() {  
   int a = 5 ; 
   int* p = &a ; 
+  printf("%p ",p) ; // When u printf("%p",p), u are printing the address of whatever p is pointing to in hex format. 
+  int* q = p ;
+  printf("%p ",q) ;   
+  // here p and q both are pointing to int a . so printf will give the same output. 
   add(p) ; // here we are passing a copy of p , a new pointer that is pointing to a. 
   printf("%p %d", p  , *p ) ;  // the pointer still pointing to a. 
 
